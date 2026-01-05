@@ -6,7 +6,6 @@ services:
       - redis-cache
     env_file:
       - .env
-      - secrets.env
     user: "unit:root"
     healthcheck:
       test: curl -f http://localhost:8080/login/ || exit 1
